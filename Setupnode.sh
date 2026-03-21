@@ -45,7 +45,9 @@ node -v
 npm -v
 
 echo "⚡ Installing Supabase CLI..."
-npm install -g supabase
+curl -fsSL https://github.com/supabase/cli/releases/latest/download/supabase_linux_amd64.tar.gz -o supabase.tar.gz
+tar -xzf supabase.tar.gz
+sudo mv supabase /usr/local/bin/
 
 echo "📌 Supabase version:"
 supabase --version
