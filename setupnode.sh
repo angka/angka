@@ -63,3 +63,9 @@ supabase start
 
 echo "✅ DONE! Supabase is running locally."
 echo "👉 Access Studio: http://localhost:54323"
+
+# --- installing tailscale ---
+echo installing tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo taiscale up
+
