@@ -33,6 +33,7 @@ sudo systemctl start docker
 
 echo "👤 Adding current user to docker group..."
 sudo usermod -aG docker $USER
+newgrp docker
 
 echo "⚠️ You may need to logout/login for docker group to apply"
 
@@ -52,20 +53,10 @@ sudo mv supabase /usr/local/bin/
 echo "📌 Supabase version:"
 supabase --version
 
-echo "📁 Initializing Supabase project..."
-mkdir -p supabase_project
-cd supabase_project
-
-supabase init
-
-echo "🐳 Starting Supabase..."
-supabase start
-
-echo "✅ DONE! Supabase is running locally."
-echo "👉 Access Studio: http://localhost:54323"
-
 # --- installing tailscale ---
 echo installing tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo taiscale up
+
+echo you need to logout from your terminal, and login again to the terminal
 
