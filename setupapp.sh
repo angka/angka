@@ -41,43 +41,7 @@ else
   cd "$APP_DIR"
 fi
 
-# --- ENV SETUP ---
-echo "⚙️ Setting up environment variables..."
-
-# Ask user input
-read -p "Enter VITE_SUPABASE_URL: " SUPABASE_URL
-read -p "Enter VITE_SUPABASE_ANON_KEY: " SUPABASE_KEY
-
-# Create .env if not exist
-if [ ! -f ".env" ]; then
-  echo "📄 Creating new .env file..."
-  touch .env
-fi
-
-# Function to set or update env variable
-set_env() {
-  KEY=$1
-  VALUE=$2
-
-  if grep -q "^$KEY=" .env; then
-    sed -i "s|^$KEY=.*|$KEY=$VALUE|" .env
-  else
-    echo "$KEY=$VALUE" >> .env
-  fi
-}
-
-# Apply values
-set_env "VITE_SUPABASE_URL" "$SUPABASE_URL"
-set_env "VITE_SUPABASE_ANON_KEY" "$SUPABASE_KEY"
-
-echo "✅ .env configured:"
-grep VITE_SUPABASE .env
-
-# --- INSTALL DEPENDENCIES ---
-echo "📦 Installing dependencies..."
-npm install
-
-# --- REMOVR PREVIOUSLY BUILD dist ---
+# --- REMOVE PREVIOUSLY BUILD dist ---
   echo "remove preexisting dist build"
   rm -rf dist
 
