@@ -35,7 +35,7 @@ echo "👤 Adding current user to docker group..."
 sudo usermod -aG docker $USER
 newgrp docker
 
-echo "⚠️ You may need to logout/login for docker group to apply"
+echo "⚠️ You may need to logout/login terminal session for docker group to apply"
 
 echo "🟢 Installing latest Node.js (via NodeSource)..."
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
@@ -54,9 +54,14 @@ echo "📌 Supabase version:"
 supabase --version
 
 # --- installing tailscale ---
-echo installing tailscale
+echo "installing tailscale"
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo taiscale up
 
-echo you need to logout from your terminal, and login again to the terminal
 
+echo "docker installed"
+echo "node.js installed"
+echo "supabase installed"
+echo "tailscale installed"
+echo "you need to logout from your terminal, and login again to the terminal"
+echo "after login to terminal you need to run setupapp.sh"
