@@ -5,7 +5,7 @@ set -e
 REPO_URL="https://github.com/angka/silly-lobster-climb.git"
 APP_DIR="$HOME/apps/silly-lobster-climb"
 
-echo "🚀 Starting Dyad app setup..."
+echo "🚀 Starting EMR Contact Lens setup..."
 
 # --- CHECK REQUIREMENTS ---
 echo "🔍 Checking requirements..."
