@@ -1,16 +1,17 @@
 angka
 =====
-setupnode.sh 
-berisikan
+setupnode.sh;
+berisikan:
 install curl, docker, mode. js, supabase
-setupapp
-instal app dan dependenciesnya
 
-setupapp.sh 
-berisikan
-clone git app
+setupappuser.sh (run as user with sudo) atau setupapproot.sh (run as root);
+berisikan:;
+clone git app, konfigurasinya
 
-setupnginx.sh
-install nginx
-setup app background
-and configure it
+
+setupnginx.sh;
+run this script inside folder app;
+starting supabase;
+install nginx;
+setup app in background;
+and configure it;
