@@ -1,6 +1,3 @@
-
-Check this bash is it correct? And refine it, i want to run this script with normal user and gain root priviledge using sudo, but the installation goes to /home/user not at /root.
-
 #!/bin/bash
 
 set -e
